@@ -16,6 +16,5 @@ namespace calculator_oop
         {
             InitializeComponent();
         }
-
     }
 }
