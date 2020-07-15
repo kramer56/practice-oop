@@ -38,6 +38,8 @@
             this.subtraction = new System.Windows.Forms.Button();
             this.multiplication = new System.Windows.Forms.Button();
             this.division = new System.Windows.Forms.Button();
+            this.sqrt = new System.Windows.Forms.Button();
+            this.exp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -96,7 +98,7 @@
             this.summary.TabIndex = 6;
             this.summary.Text = "+";
             this.summary.UseVisualStyleBackColor = true;
-            this.summary.Click += new System.EventHandler(this.summary_Click);
+            this.summary.Click += new System.EventHandler(this.Calculate);
             // 
             // subtraction
             // 
@@ -106,7 +108,7 @@
             this.subtraction.TabIndex = 7;
             this.subtraction.Text = "-";
             this.subtraction.UseVisualStyleBackColor = true;
-            this.subtraction.Click += new System.EventHandler(this.subtraction_Click);
+            this.subtraction.Click += new System.EventHandler(this.Calculate);
             // 
             // multiplication
             // 
@@ -116,7 +118,7 @@
             this.multiplication.TabIndex = 8;
             this.multiplication.Text = "*";
             this.multiplication.UseVisualStyleBackColor = true;
-            this.multiplication.Click += new System.EventHandler(this.multiplication_Click);
+            this.multiplication.Click += new System.EventHandler(this.Calculate);
             // 
             // division
             // 
@@ -126,13 +128,35 @@
             this.division.TabIndex = 9;
             this.division.Text = "/";
             this.division.UseVisualStyleBackColor = true;
-            this.division.Click += new System.EventHandler(this.division_Click);
+            this.division.Click += new System.EventHandler(this.Calculate);
+            // 
+            // sqrt
+            // 
+            this.sqrt.Location = new System.Drawing.Point(50, 105);
+            this.sqrt.Name = "sqrt";
+            this.sqrt.Size = new System.Drawing.Size(100, 45);
+            this.sqrt.TabIndex = 10;
+            this.sqrt.Text = "√x";
+            this.sqrt.UseVisualStyleBackColor = true;
+            this.sqrt.Click += new System.EventHandler(this.CalculateOne);
+            // 
+            // exp
+            // 
+            this.exp.Location = new System.Drawing.Point(300, 105);
+            this.exp.Name = "exp";
+            this.exp.Size = new System.Drawing.Size(100, 45);
+            this.exp.TabIndex = 11;
+            this.exp.Text = " e^x";
+            this.exp.UseVisualStyleBackColor = true;
+            this.exp.Click += new System.EventHandler(this.CalculateOne);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 335);
+            this.ClientSize = new System.Drawing.Size(432, 163);
+            this.Controls.Add(this.exp);
+            this.Controls.Add(this.sqrt);
             this.Controls.Add(this.division);
             this.Controls.Add(this.multiplication);
             this.Controls.Add(this.subtraction);
@@ -162,6 +186,8 @@
         private System.Windows.Forms.Button subtraction;
         private System.Windows.Forms.Button multiplication;
         private System.Windows.Forms.Button division;
+        private System.Windows.Forms.Button sqrt;
+        private System.Windows.Forms.Button exp;
     }
 }
 

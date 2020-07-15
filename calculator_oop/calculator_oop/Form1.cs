@@ -9,37 +9,43 @@ namespace calculator_oop
         {
             InitializeComponent();
         }
-
-        private void summary_Click(object sender, EventArgs e)
+        private void Calculate(object sender, EventArgs e)
         {
-            double firstNumber = Convert.ToDouble(this.textBox1.Text);
-            double secondNumber = Convert.ToDouble(this.textBox2.Text);
-            double result = firstNumber + secondNumber;
-            textBox3.Text = result.ToString();
+            try
+            {
+                double firstNumber = Convert.ToDouble(this.textBox1.Text);
+                double secondNumber = Convert.ToDouble(this.textBox2.Text);
+                double result;
+                ITwoArgumentsCalculator calculator = TwoArgumentsFactory.CreateCalculator(((Button)sender).Name);
+                result = calculator.calculate(firstNumber, secondNumber);
+                textBox3.Text = result.ToString();
+            }
+            catch (Exception ex)
+
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
         }
+        private void CalculateOne(object sender, EventArgs e)
 
-        private void subtraction_Click(object sender, EventArgs e)
         {
-            double firstNumber = Convert.ToDouble(this.textBox1.Text);
-            double secondNumber = Convert.ToDouble(this.textBox2.Text);
-            double result = firstNumber - secondNumber;
-            textBox3.Text = result.ToString();
-        }
+            try
+            {
+                double firstNumber = Convert.ToDouble(this.textBox1.Text);
+                double result;
+                IOneArgumentCalculator calculator = OneArgumentFactory.CreateCalculator(((Button)sender).Name);
+                result = calculator.calculate(firstNumber);
+                textBox3.Text = result.ToString();
+            }
 
-        private void multiplication_Click(object sender, EventArgs e)
-        {
-            double firstNumber = Convert.ToDouble(this.textBox1.Text);
-            double secondNumber = Convert.ToDouble(this.textBox2.Text);
-            double result = firstNumber * secondNumber;
-            textBox3.Text = result.ToString();
-        }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
-        private void division_Click(object sender, EventArgs e)
-        {
-            double firstNumber = Convert.ToDouble(this.textBox1.Text);
-            double secondNumber = Convert.ToDouble(this.textBox2.Text);
-            double result = firstNumber / secondNumber;
-            textBox3.Text = result.ToString();
         }
     }
 }
