@@ -2,7 +2,7 @@
 
 namespace calculator_oop
 {
-    internal class sqrt : IOneArgumentCalculator
+    internal class Extraction : IOneArgumentCalculator
     {
         public double calculate(double firstNumber)
 

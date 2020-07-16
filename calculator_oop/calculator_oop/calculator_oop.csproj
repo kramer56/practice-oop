@@ -61,7 +61,7 @@
     <Compile Include="OneArgumentFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sqrt.cs" />
+    <Compile Include="Extraction.cs" />
     <Compile Include="Subtrackter.cs" />
     <Compile Include="TwoArgumentsFactory.cs" />
     <EmbeddedResource Include="Form1.resx">

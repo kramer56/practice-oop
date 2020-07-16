@@ -3,11 +3,7 @@ namespace calculator_oop
 {
     public static class TwoArgumentsFactory
     {
-        /// <summary>
-        /// /// factory for functions with two arguments: addition, subtraction, division, multiplication, etc.
-        /// </summary>
-        /// /// <param name="name"> select button </param>
-        /// < /// <returns> return completed calculations </returns>
+
         public static ITwoArgumentsCalculator CreateCalculator(String name)
         {
             switch(name)

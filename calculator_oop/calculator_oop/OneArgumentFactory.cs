@@ -7,7 +7,7 @@ namespace calculator_oop
         {
             switch (name)
             {
-                case "sqrt": return new sqrt();
+                case "sqrt": return new Extraction();
                 case "exp": return new Exp();
                 default: throw new Exception("Неизвестная операция");
             }
