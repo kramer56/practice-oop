@@ -2,7 +2,7 @@
 
 namespace calculator_oop
 {
-    internal class Divisioner : ITwoArgumentsCalculator
+    public class Divisioner : ITwoArgumentsCalculator
     {
         public double calculate(double firstNumber,double secondNumber)
 

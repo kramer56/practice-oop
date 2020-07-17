@@ -1,7 +1,7 @@
 ﻿using System;
 namespace calculator_oop
 {
-    class OneArgumentFactory
+    public static class OneArgumentFactory
     {
         public static IOneArgumentCalculator CreateCalculator(String name)
         {

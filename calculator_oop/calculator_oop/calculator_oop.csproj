@@ -46,24 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Additioner.cs" />
-    <Compile Include="Divisioner.cs" />
-    <Compile Include="Exp.cs" />
+    <Compile Include="TwoArgsClasses\Additioner.cs" />
+    <Compile Include="TwoArgsClasses\Divisioner.cs" />
+    <Compile Include="OneArgsClasses\Exp.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IOneArgumentCalculator.cs" />
-    <Compile Include="ITwoArgumentsCalculator.cs" />
-    <Compile Include="Multiplicator.cs" />
-    <Compile Include="OneArgumentFactory.cs" />
+    <Compile Include="OneArgsClasses\IOneArgumentCalculator.cs" />
+    <Compile Include="TwoArgsClasses\ITwoArgumentsCalculator.cs" />
+    <Compile Include="TwoArgsClasses\Multiplicator.cs" />
+    <Compile Include="OneArgsClasses\OneArgumentFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Extraction.cs" />
-    <Compile Include="Subtrackter.cs" />
-    <Compile Include="TwoArgumentsFactory.cs" />
+    <Compile Include="OneArgsClasses\Extraction.cs" />
+    <Compile Include="TwoArgsClasses\Subtrackter.cs" />
+    <Compile Include="TwoArgsClasses\TwoArgumentsFactory.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

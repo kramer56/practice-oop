@@ -2,7 +2,7 @@
 
 namespace calculator_oop
 {
-    internal class Extraction : IOneArgumentCalculator
+    public class Extraction : IOneArgumentCalculator
     {
         public double calculate(double firstNumber)
 
